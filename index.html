@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzsoni Vaker - Hivatalos Zenekari Weboldal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sztkGreen: '#2E5A44',
+                        sootBlack: '#121212',
+                        roosterYellow: '#FFC83B',
+                        beerCream: '#F5EFEB',
+                    },
+                    fontFamily: {
+                        retro: ['Courier New', 'Courier', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Retro nyomdai / pecsét hatású recés textúrák beszúrása */
+        .lofi-border {
+            border: 3px solid #FFC83B;
+            box-shadow: 5px 5px 0px 0px #2E5A44;
+        }
+        .stamp-effect {
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+            transform: rotate(-1.5deg);
+        }
+    </style>
+</head>
+<body class="bg-sootBlack text-beerCream font-retro min-h-screen selection:bg-roosterYellow selection:text-sootBlack flex flex-col justify-between">
+
+    <!-- Fő fejléc / Hero szekció -->
+    <header class="container mx-auto px-4 py-8 text-center flex-grow flex flex-col justify-center items-center">
+        
+        <!-- Zenekari selymesen lehangolt, szomorú sörösüveg logó (Retró-Hungarian bélyeg) -->
+        <div class="lofi-border bg-sztkGreen p-6 max-w-sm rounded mb-8 text-center relative overflow-hidden">
+            <!-- Retro belső keretvonal -->
+            <div class="border border-dashed border-roosterYellow/40 p-4">
+                <!-- Logó szimbólum (Karakteres sörösüveg vázlat) -->
+                <div class="text-6xl mb-2 filter drop-shadow-[2px_2px_0px_rgba(18,18,18,1)]">🍺</div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-roosterYellow stamp-effect tracking-tighter">
+                    DZSONI VAKER
+                </h1>
+                <p class="text-xs uppercase mt-2 text-beerCream/80 tracking-wider">
+                    — Fanyar Underground Alternatív Rock —
+                </p>
+            </div>
+        </div>
+
+        <!-- Beágyazott Spotify Lejátszó (Direct Player) -->
+        <div class="w-full max-w-2xl bg-sztkGreen/30 border border-sztkGreen/60 p-4 rounded mb-8 shadow-lg">
+            <h3 class="text-sm uppercase tracking-widest text-roosterYellow mb-3">Legújabb kislemezünk</h3>
+            <div class="relative w-full overflow-hidden rounded bg-sootBlack" style="padding-top: 15%;">
+                <!-- Fiktív Spotify Embed iFrame (amint élesednek a dalok, a valódi URI-re cserélhető) -->
+                <div class="absolute inset-0 flex items-center justify-between px-6 bg-sztkGreen/20 border-l-4 border-roosterYellow">
+                    <div class="flex items-center space-x-4">
+                        <span class="text-3xl">💿</span>
+                        <div class="text-left">
+                            <p class="font-bold text-sm md:text-base text-roosterYellow">Pucéran (már nem nézek ki jól)</p>
+                            <p class="text-xs text-beerCream/70">Dzsoni Vaker — Debut EP (Phase 1 MVP)</p>
+                        </div>
+                    </div>
+                    <button class="bg-roosterYellow hover:bg-beerCream text-sootBlack font-extrabold py-2 px-4 rounded-full text-xs uppercase tracking-wider transition-colors duration-200">
+                        Spotify Hallgatás
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fő felhívások / CTA Gombok -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mb-12">
+            <!-- Discord Onboarding (Fő konverzió) -->
+            <a href="https://discord.gg/YOUR_INVITE_LINK" target="_blank" 
+               class="bg-roosterYellow text-sootBlack hover:bg-beerCream hover:scale-[1.02] transform transition-all duration-200 font-extrabold py-4 px-6 rounded text-center uppercase tracking-wider shadow-[4px_4px_0px_0px_rgba(46,90,68,1)] text-sm">
+                💬 Csatlakozás a Discord közösséghez
+            </a>
+        </div>
+
+        <!-- Koncertek / Gigs szekció -->
+        <div class="w-full max-w-2xl text-left border border-sztkGreen/40 bg-sztkGreen/10 p-6 rounded mb-12">
+            <h2 class="text-xl font-bold text-roosterYellow border-b border-sztkGreen/40 pb-2 mb-4 uppercase tracking-widest">
+                📅 Budapesti Bemutató Koncertek
+            </h2>
+            <div class="space-y-4">
+                <!-- Concert 1 -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-2 border-b border-sztkGreen/20">
+                    <div>
+                        <span class="bg-sztkGreen text-beerCream text-[10px] uppercase px-2 py-0.5 rounded font-bold mr-2">Gólya</span>
+                        <span class="text-xs text-beerCream/60">2026. június 20. — 19:30</span>
+                        <p class="font-bold mt-1 text-sm md:text-base">Dzsoni Vaker & Társművészek (Estnyitó Szeánsz)</p>
+                    </div>
+                    <a href="#" class="text-xs text-roosterYellow hover:underline mt-2 md:mt-0 uppercase font-bold tracking-wider">Facebook Esemény →</a>
+                </div>
+                <!-- Concert 2 -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-2 border-b border-sztkGreen/20">
+                    <div>
+                        <span class="bg-sztkGreen text-beerCream text-[10px] uppercase px-2 py-0.5 rounded font-bold mr-2">Manyi Műhely</span>
+                        <span class="text-xs text-beerCream/60">2026. július 11. — 20:00</span>
+                        <p class="font-bold mt-1 text-sm md:text-base">Honky Tonk Hősök Kocsmakoncert (Intim, sanzonos)</p>
+                    </div>
+                    <a href="#" class="text-xs text-roosterYellow hover:underline mt-2 md:mt-0 uppercase font-bold tracking-wider">Facebook Esemény →</a>
+                </div>
+                <!-- Concert 3 -->
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center py-2">
+                    <div>
+                        <span class="bg-sztkGreen text-beerCream text-[10px] uppercase px-2 py-0.5 rounded font-bold mr-2">Turbina Basement</span>
+                        <span class="text-xs text-beerCream/60">2026. augusztus 15. — 21:00</span>
+                        <p class="font-bold mt-1 text-sm md:text-base">Nagy Pogó & Egzisztenciális Kataklizma (Akvárium-előszezon)</p>
+                    </div>
+                    <a href="#" class="text-xs text-roosterYellow hover:underline mt-2 md:mt-0 uppercase font-bold tracking-wider">Facebook Esemény →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Merchandising Section (Lean Google Forms Shop) -->
+        <div id="merch" class="w-full max-w-2xl text-left border border-sztkGreen/40 bg-sztkGreen/10 p-6 rounded">
+            <h2 class="text-xl font-bold text-roosterYellow border-b border-sztkGreen/40 pb-2 mb-4 uppercase tracking-widest flex items-center justify-between">
+                <span>🧦 Merchandise</span>
+                <span class="text-xs text-roosterYellow bg-sztkGreen px-2 py-1 rounded normal-case tracking-normal">Limitált darabszám!</span>
+            </h2>
+            <div class="flex flex-col md:flex-row gap-6 items-center">
+                <div class="text-6xl md:text-8xl p-4 bg-sootBlack rounded border border-sztkGreen/30 shadow-inner">🧦</div>
+                <div class="flex-grow">
+                    <h3 class="font-extrabold text-lg text-beerCream">"Socks with Stories" — Dzsoni Vaker Mintás Zoknik</h3>
+                    <p class="text-xs text-beerCream/80 mt-2 leading-relaxed">
+                        Prémium, strapabíró pamutzoknik kíméletlenül fanyar, szatirikus dalszöveg-idézetekkel nyomtatva. Custom, egyedi karton "bureaucratic fásultság" diagnózis tokban szállítva.
+                    </p>
+                    <p class="text-sm font-bold text-roosterYellow mt-3">Ár: 2.990 Ft / pár</p>
+                    
+                    <!-- Lean Checkout Form CTA -->
+                    <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank"
+                       class="inline-block mt-4 bg-sztkGreen hover:bg-beerCream hover:text-sootBlack text-beerCream font-extrabold py-2 px-6 rounded text-xs uppercase tracking-wider transition-colors duration-200">
+                        Zokni Megrendelési Lap Kitöltése →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Retro Lábléc -->
+    <footer class="bg-sootBlack border-t border-sztkGreen/30 py-6 text-center text-xs text-beerCream/50">
+        <p class="mb-2">© 2026 Dzsoni Vaker. Minden jog fenntartva (Virtuálisan Artisjus regisztrálva).</p>
+        <p>A weboldal 100% szervermentes zöld technológiával, ingyenesen fut a <a href="https://pages.github.com" class="text-roosterYellow hover:underline">GitHub Pages</a> hálózatán.</p>
+    </footer>
+
+</body>
+</html>
